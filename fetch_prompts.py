@@ -20,8 +20,11 @@ except ImportError:
 
 def fetch_url_content(url):
     """Fetch content from the given URL."""
+    headers = {
+        'User-Agent': 'ai-prompting-fetcher/1.0 (https://github.com/mrichardsJBOIT/ai-prompting)'
+    }
     try:
-        response = requests.get(url, timeout=30)
+        response = requests.get(url, headers=headers, timeout=30)
         response.raise_for_status()
         return response.text
     except requests.RequestException as e:
@@ -93,9 +96,9 @@ def main():
     html_content = fetch_url_content(args.url)
     
     print("Extracting prompts...")
-    prompts = extract_prompts(html_content)
+    extracted_text = extract_prompts(html_content)
     
-    if not prompts.strip():
+    if not extracted_text.strip():
         print("Warning: No content extracted from the URL")
         sys.exit(1)
     
@@ -106,10 +109,10 @@ def main():
         filename += '.txt'
     
     print(f"Saving prompts to file...")
-    filepath = save_prompts(prompts, args.output_dir, filename)
+    filepath = save_prompts(extracted_text, args.output_dir, filename)
     
     print(f"✓ Prompts saved successfully to: {filepath}")
-    print(f"  ({len(prompts)} characters)")
+    print(f"  ({len(extracted_text)} characters)")
 
 
 if __name__ == '__main__':

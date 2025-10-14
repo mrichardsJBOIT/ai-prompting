@@ -64,3 +64,18 @@ When implementing features:
 -- Only merge to development once your tests pass locally
 -- Once the work is merged to development with working tests, we'll do E2E testing
 -- Once the work passes E2E we'll merge to main (prod) and it'll be deployed
+
+
+## From [John Hubbard](https://www.linkedin.com/posts/johubbard_after-6-months-of-using-ai-coding-tools-activity-7383606814086672384-vTW9)
+1. Coding LLMs are working with *small context sizes* compared to the overall challenge space of keeping tens of thousands of lines of code working from commit to commit. You MUST have the AI write tests for everything it generates. You MUST tag every working checkpoint so that it (the AI) can compare working with non-working.
+2. When you tell an AI tool to "plan", you are working a different part of the model - or even potentially a completely different model - when you are telling it to "execute". "Deep thinking" models are better at analyzing code and planning than they are at executing. Sometimes even "dumb" models are better at executing to a plan than the smart ones, and they are certainly CHEAPER.
+3. You MUST break planning from execution, just like you would do if you were writing the code yourself, and you must have the AI write planning files that it can follow. If you or your devs are executing plans with the most expensive models, you're almost certainly just wasting money.
+4. You must AUDIT the code for every feature cycle. My "flow" is basically:
+* Plan (write this as a .md file, save in plans/ directory)
+* Execute (write the code)
+* Write tests
+* Run tests
+* Re-execute as necessary until tests pass
+* Audit - check the code against Plan.md
+
+You also don't need a lot of fancy prompts to do any of this. You can literally write out your high-level goals and then have the tool write the plan, then read the plan back to you, correct its assumptions, then proceed with steps 2-6.

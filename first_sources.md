@@ -1,10 +1,21 @@
 # Sources
 
+https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html
+
+https://docs.cline.bot/prompting/cline-memory-bank
+
+https://docs.tessl.io/introduction-to-tessl/concepts
+
+https://github.com/github/spec-kit
+
 https://docs.x.ai/docs/guides/grok-code-prompt-engineering
 
 https://medium.com/@TimSylvester/processes-for-better-agentic-coding-f452d4620ba8
 
 https://github.com/tsylvester/paynless-framework/blob/main/docs/dev_plan.md
+
+
+
 
 # Development Plan & Guidelines
 

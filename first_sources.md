@@ -6,7 +6,7 @@ https://docs.cline.bot/prompting/cline-memory-bank
 
 https://docs.tessl.io/introduction-to-tessl/concepts
 
-https://github.com/github/spec-kit
+
 
 https://docs.x.ai/docs/guides/grok-code-prompt-engineering
 
@@ -14,7 +14,13 @@ https://medium.com/@TimSylvester/processes-for-better-agentic-coding-f452d4620ba
 
 https://github.com/tsylvester/paynless-framework/blob/main/docs/dev_plan.md
 
+https://github.com/ruvnet/claude-flow/
 
+## Spec Drive Dev Links
+https://ruv.io/projects
+https://kiro.dev/docs/specs/concepts/
+https://github.com/github/spec-kit
+https://tessl.io/about/
 
 
 # Development Plan & Guidelines
